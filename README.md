@@ -6,6 +6,7 @@ The objective of this project is to train and deploy a microservice that detects
 The video model predict the emotion in parallel. The final class prediction is a weighted and combined "multimodal" prediction of the two seperate predictions.
 # Overview 👓
 [Train model video](https://github.com/wintechis/cv_for_primitives/blob/main/src/webapp/process_video.py)
+
 [Webapp](https://github.com/wintechis/cv_for_primitives/blob/main/src/webapp)
 
 
