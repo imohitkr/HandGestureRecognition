@@ -13,7 +13,29 @@ The video model predict the emotion in parallel. The final class prediction is a
 # Training 📉
 * CNN as chosen models for video analyzing
 *  Video: 📽️
-    * Dataset
+    * Dataset:(https://www.kaggle.com/datasets/ayuraj/asl-dataset)
+    
+    * Improved by:Flatten, Dropout
+# Deployment Tech Stack💻
+* Models trained using tensorflow and jupyter notebooks
+
+* real-live graphs shown using highcharts.js and Ajax
+
+* Webapp built with Flask
+
+* Front-end:
+
+     * Flask
+     * Ajax
+     * Bootstrap
+*Back-end:
+
+    * Python
+    * Keras
+    * Numpy
+    * CV2
+    * Pyaudio
+    * Librosa
          
      
 
