@@ -5,7 +5,7 @@ The objective of this project is to train and deploy a microservice that detects
 # Methodology 🃏
 The video model predict the emotion in parallel. The final class prediction is a weighted and combined "multimodal" prediction of the two seperate predictions.
 # Overview 👓
-[](url)
+Train model video 
 
 
 
