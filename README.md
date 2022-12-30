@@ -13,8 +13,8 @@ The video model predict the emotion in parallel. The final class prediction is a
 # Training 📉
 * CNN as chosen models for  video analyzing
 * Video: 📽️
-Dataset:
-             +
+        Dataset:
+             
 
 
 
