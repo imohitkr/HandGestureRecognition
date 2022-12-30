@@ -41,7 +41,7 @@ The video model predict the emotion in parallel. The final class prediction is a
 * Git clone the repo
 * Install the dependencies from requirements.txt (pip install -r requirements.txt)
 * Run the app.py file and wait until the server is started and ready. This can take up to 2 minutes
-* Open localhost 127.0.0.1:5000/ on your favorite web browser
+* Open localhost [127.0.0.1:5000/] on your favorite web browser
 * The usage of the application is self-explanatory
 # FAQ 💡
 * If video recognition doesn't work: make sure the camera is not blocked by some other application (e.g. Videocalling in Zoom or Teams).
