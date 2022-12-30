@@ -11,7 +11,7 @@ The video model predict the emotion in parallel. The final class prediction is a
 
 [H5 Files](https://github.com/wintechis/cv_for_primitives/blob/main/src/webapp/model_SIBI.h5)
 # Training 📉
- Cnn
+ "." Cnn
 
 
 
