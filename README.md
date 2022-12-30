@@ -1,2 +1,2 @@
 # cv_for_primitives
-Developing a Camera-based Applocation for Gestural Primitives Recognition (Hand).
+Developing a Camera-based Application for Gestural Primitives Recognition (Hand).
