@@ -36,13 +36,17 @@ The video model predict the emotion in parallel. The final class prediction is a
     * CV2
     * mediapipe
 # Requirements and installation instructions / Tutorial
-* a [Python Installation](https://www.python.org/downloads/) is necessary(atleast V3.7)
-* a working webcam and microphone is necessary. The input ports should be detected automatically.
-* git clone the repo
+* A [Python Installation](https://www.python.org/downloads/) is necessary(atleast V3.7)
+* A working webcam and microphone is necessary. The input ports should be detected automatically.
+* Git clone the repo
 * Install the dependencies from requirements.txt (pip install -r requirements.txt)
-* run the app.py file and wait until the server is started and ready. This can take up to 2 minutes
-* open localhost 127.0.0.1:5000/ on your favorite web browser
-* the usage of the application is self-explanatory
+* Run the app.py file and wait until the server is started and ready. This can take up to 2 minutes
+* Open localhost 127.0.0.1:5000/ on your favorite web browser
+* The usage of the application is self-explanatory
+# FAQ 💡
+* If video recognition doesn't work: make sure the camera is not blocked by some other application (e.g. Videocalling in Zoom or Teams).
+# License
+This project is licensed under the MIT License. See LICENSE for more details
          
      
 
