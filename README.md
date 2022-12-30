@@ -28,7 +28,7 @@ The video model predict the emotion in parallel. The final class prediction is a
      * Flask
      * Ajax
      * Bootstrap
-*Back-end:
+* Back-end:
 
     * Python
     * Keras
