@@ -1,7 +1,7 @@
 # cv_for_primitives
 Developing a Camera-based Application for Gestural Primitives Recognition (Hand).
 # Objective 🎯
-The objective of this project is to train and deploy a microservice that detects the current emotion of a user based on facial expression from the webcam inputs.
+The objective of this project is to train and deploy a microservice that detects the American Sign Language gestures of a user based on hand recognition from the webcam inputs.
 # Methodology 🃏
 The video model predict the emotion in parallel. The final class prediction is a weighted and combined "multimodal" prediction of the two seperate predictions.
 # Overview 👓
