@@ -18,17 +18,20 @@ webapp folder provides us with a already trained model and corresponding web GUI
 ### Running 💻
 
 1. Clone the repository
-```git
-git clone https://github.com/wintechis/cv_for_primitives.git
+
+```bash
+$ git clone https://github.com/wintechis/cv_for_primitives.git
 ```
 2. Navigate to cloned repository and run the following command to install the dependencies. 
+
 ```bash
 # install python 3.9 
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 3. Move to the [webapp](src/webapp) directory and run the following command to start the web GUI. 
 ```bash
-python app.py
+$ cd src/webapp
+$ python app.py
 ```
 4. This should start the web server at `127.0.0.1:5000`. 
 
