@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 
 import hand_recognize
+
 # import classify
 
 camera = cv2.VideoCapture(0)
@@ -20,7 +21,7 @@ def frame_process():  # generate frame by frame from camera
 
             frame, landmarks, gestures, palm_orientation = hand_recognize.hand_feature_extract(frame, i)
             i = i + 1
-            label = f"{gestures[0].category_name} ({np.round(gestures[0].score, decimals=2)}) [{palm_orientation}]"  if gestures else ""
+            label = f"{gestures[0].category_name} ({np.round(gestures[0].score, decimals=2)}) [{palm_orientation}]" if gestures else ""
             if label != "":
                 with open("tmp/video_prediction.json", "r+") as fp:
                     data = json.load(fp)

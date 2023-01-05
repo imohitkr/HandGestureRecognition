@@ -7,7 +7,7 @@ import numpy as np
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
 app = Flask(__name__ + "- Hand Gesture Recognition", static_folder='static')
-
+data = {}
 
 @app.route('/')
 def index():
@@ -36,8 +36,12 @@ def video():
 @app.route('/live-data_video')
 def live_data_video():
     """ echo video predictions as JSON"""
-    f = open('tmp/video_prediction.json')
-    data = json.load(f)
+    try:
+        f = open('tmp/video_prediction.json')
+        data = json.load(f)
+    except Exception as e:
+       pass
+
     response = make_response(json.dumps(data))
     response.content_type = 'application/json'
     return response
