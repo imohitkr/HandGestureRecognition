@@ -1,3 +1,5 @@
+import json
+
 import cv2
 import numpy as np
 
@@ -19,6 +21,15 @@ def frame_process():  # generate frame by frame from camera
             frame, landmarks, gestures, palm_orientation = hand_recognize.hand_feature_extract(frame, i)
             i = i + 1
             label = f"{gestures[0].category_name} ({np.round(gestures[0].score, decimals=2)}) [{palm_orientation}]"  if gestures else ""
+            if label != "":
+                with open("tmp/video_prediction.json", "r+") as fp:
+                    data = json.load(fp)
+                    if len(data["labels"]) > 5:
+                        data["labels"].pop(0)
+                    data["labels"].append(label)
+                    fp.seek(0)
+                    fp.truncate()
+                    json.dump(data, fp)
 
             # show the prediction on the frame
             cv2.putText(frame, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX,
