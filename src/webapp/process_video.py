@@ -8,10 +8,11 @@ import hand_recognize
 # import classify
 
 camera = cv2.VideoCapture(0)
+i = 0
 
 
 def frame_process():  # generate frame by frame from camera
-    i = 0
+    global i
     while True:
         # Capture frame by frame
         success, frame = camera.read()
@@ -25,7 +26,7 @@ def frame_process():  # generate frame by frame from camera
             if label != "":
                 with open("tmp/video_prediction.json", "r+") as fp:
                     data = json.load(fp)
-                    if len(data["labels"]) > 5:
+                    while len(data["labels"]) >= 4:
                         data["labels"].pop(0)
                     data["labels"].append(label)
                     fp.seek(0)
