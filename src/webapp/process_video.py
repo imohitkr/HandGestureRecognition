@@ -1,11 +1,14 @@
 import cv2
+import numpy as np
+
 import hand_recognize
-import classify
+# import classify
 
 camera = cv2.VideoCapture(0)
 
 
 def frame_process():  # generate frame by frame from camera
+    i = 0
     while True:
         # Capture frame by frame
         success, frame = camera.read()
@@ -13,8 +16,9 @@ def frame_process():  # generate frame by frame from camera
             # Flip the frame vertically
             frame = cv2.flip(frame, 1)
 
-            frame, landmarks = hand_recognize.hand_feature_extract(frame)
-            label = classify.classify(landmarks)
+            frame, landmarks, gestures, palm_orientation = hand_recognize.hand_feature_extract(frame, i)
+            i = i + 1
+            label = f"{gestures[0].category_name} ({np.round(gestures[0].score, decimals=2)}) [{palm_orientation}]"  if gestures else ""
 
             # show the prediction on the frame
             cv2.putText(frame, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX,
