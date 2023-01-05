@@ -23,6 +23,10 @@ def video_feed():
 def about():
     return render_template('about.html')
 
+@app.route('/asl')
+def asl():
+    return render_template('asl.html')
+
 
 @app.route('/video')
 def video():
