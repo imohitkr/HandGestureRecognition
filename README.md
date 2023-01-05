@@ -1,51 +1,47 @@
-# cv_for_primitives
-Developing a Camera-based Application for Gestural Primitives Recognition (Hand).
-# Objective 🎯
-The objective of this project is to train and deploy a microservice that detects the American Sign Language gestures of a user based on hand recognition from the webcam inputs.
-# Methodology 🃏
-The video model predict the emotion in parallel. The final class prediction is a weighted and combined "multimodal" prediction of the two seperate predictions.
-# Overview 👓
-[Train model video](https://github.com/wintechis/cv_for_primitives/blob/main/src/webapp/process_video.py)
+## Computer Vision for Gesture Primitives (cv_for_primitives)
+Microservice to be used for training and recognition of hand gestures
+### Objective 🎯
+The objective of this project is to provide tools to train hand gesture recognition. A microservice has also been created
+that detects the American Sign Language gestures and also detects the user palm orientation.
 
-[Webapp](https://github.com/wintechis/cv_for_primitives/blob/main/src/webapp)
+### Methodology 🃏
+1. Take input from the camera
+2. Run the model on the input frame
+3. Classify the palm orientation and gesture recognition
 
-[H5 Files](https://github.com/wintechis/cv_for_primitives/blob/main/src/webapp/model_SIBI.h5)
-# Training 📉
-* CNN as chosen models for video analyzing
-*  Video: 📽️
-    * Dataset:(https://www.kaggle.com/datasets/ayuraj/asl-dataset)
-    
-    * Improved by:Flatten, Dropout
-# Deployment Tech Stack💻
-* Models trained using tensorflow and jupyter notebooks
+### Overview 👓
+The code is present within the [src/](src) directory. 
+It contains two folders [model](src/model) and [webapp](src/webapp). 
+model folder provides code to train a gesture recognition model. 
+webapp folder provides us with a already trained model and corresponding web GUI. 
 
-* real-live graphs shown using highcharts.js and Ajax
+### Running 💻
 
-* Webapp built with Flask
+1. Clone the repository
+```git
+git clone https://github.com/wintechis/cv_for_primitives.git
+```
+2. Navigate to cloned repository and run the following command to install the dependencies. 
+```bash
+# install python 3.9 
+pip install -r requirements.txt
+```
+3. Move to the [webapp](src/webapp) directory and run the following command to start the web GUI. 
+```bash
+python app.py
+```
+4. This should start the web server at `127.0.0.1:5000`. 
 
-* Front-end:
+This GIF also demonstrates steps 3 and 4.
 
-     * Flask
-     * json
-     
-* Back-end:
+![](blob/how-to-run.gif)
 
-    * Python
-    * Keras
-    * Numpy
-    * CV2
-    * mediapipe
-# Requirements and installation instructions / Tutorial
-* A [Python Installation](https://www.python.org/downloads/) is necessary(atleast V3.7)
-* A working webcam and microphone is necessary. The input ports should be detected automatically.
-* Git clone the repo
-* Install the dependencies from requirements.txt (pip install -r requirements.txt)
-* Run the app.py file and wait until the server is started and ready. This can take up to 2 minutes
-* Open localhost (127.0.0.1:5000/) on your favorite web browser
-* The usage of the application is self-explanatory
-# FAQ 💡
+When the web GUI starts you can navigate to the Video Gesture Recognizer to start playing. 
+![](blob/gesture-recognizer.gif)
+
+### FAQ 💡
 * If video recognition doesn't work: make sure the camera is not blocked by some other application (e.g. Videocalling in Zoom or Teams).
-# License
+### License
 This project is licensed under the MIT License. See LICENSE for more details
          
      
