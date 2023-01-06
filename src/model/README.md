@@ -39,8 +39,7 @@ def prepare_data(
 ```
 
 Prepare the dataset. The format of the dataset contained in the dataset_path should have the type
-
-<path>/<label>/<image>.*  and one of the folders for label should be named 'none' as the mediapipe requires that
+&lt;full-path&gt;/&lt;label&gt;/&lt;image&gt;.*  and one of the folders for label should be named `none` as the mediapipe requires that
 
 **Arguments**:
 

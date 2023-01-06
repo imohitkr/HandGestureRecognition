@@ -36,7 +36,7 @@ def show_images(dataset_path) -> None:
 def prepare_data(dataset_path) -> Tuple[ClassificationDataset, ClassificationDataset, ClassificationDataset]:
     """
     Prepare the dataset. The format of the dataset contained in the dataset_path should have the type
-    <path>/<label>/<image>.*  and one of the folders for label should be named 'none' as the mediapipe requires that
+    <path>/<label>/<image>.*  and one of the folders for label should be named `none` as the mediapipe requires that
     :param dataset_path: path to the dataset
     :return: (train_data, validation_data, test_data) : training , validation and test data
     """
