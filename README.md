@@ -17,6 +17,8 @@ webapp folder provides us with a already trained model and corresponding web GUI
 
 ### Running 💻
 
+_These steps are tested on Mac OS and currently mediapipe vision model import is not supported on Windows._
+
 1. Clone the repository
 
 ```bash
