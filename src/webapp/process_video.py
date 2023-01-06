@@ -12,6 +12,10 @@ i = 0
 
 
 def frame_process():  # generate frame by frame from camera
+    """
+    This function is used to read frames from the camera and run the gesture recognition model on them.
+    :return: frame bytes from camera augmented by gesture recognition model
+    """
     global i
     while True:
         # Capture frame by frame

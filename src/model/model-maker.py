@@ -1,10 +1,17 @@
 import os
+from typing import Tuple
 
 from matplotlib import pyplot as plt
 from mediapipe_model_maker import gesture_recognizer
+from mediapipe_model_maker.python.core.data.classification_dataset import ClassificationDataset
 
 
-def show_images(dataset_path):
+def show_images(dataset_path) -> None:
+    """
+    Show the images in the dataset contained in the dataset_path
+    :param dataset_path: path to the dataset
+    :return: None
+    """
     num_examples = 5
     print(dataset_path)
     labels = []
@@ -26,7 +33,13 @@ def show_images(dataset_path):
     plt.show()
 
 
-def prepare_data(dataset_path):
+def prepare_data(dataset_path) -> Tuple[ClassificationDataset, ClassificationDataset, ClassificationDataset]:
+    """
+    Prepare the dataset. The format of the dataset contained in the dataset_path should have the type
+    <path>/<label>/<image>.*  and one of the folders for label should be named 'none' as the mediapipe requires that
+    :param dataset_path: path to the dataset
+    :return: (train_data, validation_data, test_data) : training , validation and test data
+    """
     data = gesture_recognizer.Dataset.from_folder(
         dirname=dataset_path,
         hparams=gesture_recognizer.HandDataPreprocessingParams()
@@ -36,7 +49,18 @@ def prepare_data(dataset_path):
     return train_data, validation_data, test_data
 
 
-def train_model(dataset_path, learning_rate=0.001, lr_decay=0.99, dropout_rate=0.02, batch_size=10, epochs=100):
+def train_model(dataset_path, learning_rate=0.001, lr_decay=0.99, dropout_rate=0.02, batch_size=10, epochs=100) -> None:
+    """
+    This trains a model and saves it as a mediapipe task. The task can be then used directly by the mediapipe vision
+    library to run against the video feed.
+    :param dataset_path: path to the dataset
+    :param learning_rate: learning rate to be used for training
+    :param lr_decay: learning rate decay to be used for training
+    :param dropout_rate: dropout rate for the model
+    :param batch_size: batch size to be used for training
+    :param epochs: epochs for which to train the model
+    :return: None
+    """
     train_data, validation_data, test_data = prepare_data(dataset_path)
     hparams = gesture_recognizer.HParams(learning_rate=learning_rate, lr_decay=lr_decay, export_dir="exported_model",
                                          shuffle=True,

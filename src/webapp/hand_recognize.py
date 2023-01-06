@@ -6,20 +6,23 @@ import mediapipe as mp
 import numpy as np
 from mediapipe.framework.formats import landmark_pb2
 
+# Setup mediapipe vision and task modules
 BaseOptions = mp.tasks.BaseOptions
 GestureRecognizer = mp.tasks.vision.GestureRecognizer
 GestureRecognizerOptions = mp.tasks.vision.GestureRecognizerOptions
 VisionRunningMode = mp.tasks.vision.RunningMode
 
+# Initialize the GestureRecognizer Options
 options = GestureRecognizerOptions(
     base_options=BaseOptions(model_asset_path='gesture_recognizer.task'),
     running_mode=VisionRunningMode.VIDEO,
-    num_hands=1,
+    num_hands=1, # Number of hands to recognize
     min_hand_detection_confidence=0.3,
     min_hand_presence_confidence=0.3,
     min_tracking_confidence=0.3
 )
 
+# Create the Gesture Recognizer using the above options
 recognizer = GestureRecognizer.create_from_options(options)
 
 # initialize mediapipe
@@ -28,6 +31,12 @@ mp_drawing = mp.solutions.drawing_utils
 
 
 def hand_feature_extract(frame, timestamp):
+    """
+    Extract hand features from the given frame.
+    :param frame: the frame to extract hand features from.
+    :param timestamp: the timestamp of the frame.
+    :return: (frame, landmarks, gestures, palm_orientation) : modified frame, hand landmarks, gestures, palm_orientation
+    """
     # frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=frame)
 
