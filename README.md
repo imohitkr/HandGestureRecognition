@@ -13,11 +13,11 @@ that detects the American Sign Language gestures and also detects the user palm 
 The code is present within the [src/](src) directory. 
 It contains two folders [model](src/model) and [webapp](src/webapp). 
 model folder provides code to train a gesture recognition model. 
-webapp folder provides us with a already trained model and corresponding web GUI. 
+webapp folder provides us with an already trained model and corresponding web GUI. 
 
 ### Running 💻
 
-_These steps are tested on Mac OS and currently mediapipe vision model import is not supported on Windows._
+_These steps are tested on macOS and currently mediapipe vision model import is not supported on Windows._
 
 1. Clone the repository
 
