@@ -134,3 +134,4 @@ dmypy.json
 .DS_Store
 /src/model/asl_dataset/
 /src/model/exported_model/
+/src/webapp/tmp
