@@ -1,3 +1,6 @@
+![](https://img.shields.io/badge/python-v3.9-blue.svg)
+![](https://img.shields.io/badge/platforms-Linux-blue.svg)
+![](https://img.shields.io/badge/Platform-MacOs%20Ventura-blue.svg)
 ## Computer Vision for Gesture Primitives (cv_for_primitives)
 Microservice to be used for training and recognition of hand gestures
 ### Objective 🎯
