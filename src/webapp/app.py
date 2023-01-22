@@ -55,6 +55,8 @@ def live_data_video():
     """
     echo video predictions as JSON
     """
+    global data
+
     try:
         f = open('tmp/video_prediction.json')
         data = json.load(f)
