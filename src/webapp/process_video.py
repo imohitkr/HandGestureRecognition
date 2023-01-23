@@ -28,8 +28,12 @@ def frame_process():  # generate frame by frame from camera
             i = i + 1
             label = f"{gestures[0].category_name} ({np.round(gestures[0].score, decimals=2)}) [{palm_orientation}]" if gestures else ""
             if label != "":
-                with open("tmp/video_prediction.json", "r+") as fp:
-                    data = json.load(fp)
+                with open("tmp/video_prediction.json", "a+") as fp:
+                    fp.seek(0)
+                    try:
+                        data = json.load(fp)
+                    except json.decoder.JSONDecodeError:
+                        data = {"labels": []}
                     while len(data["labels"]) >= 4:
                         data["labels"].pop(0)
                     data["labels"].append(label)

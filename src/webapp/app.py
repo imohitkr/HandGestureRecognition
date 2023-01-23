@@ -5,6 +5,10 @@ import os
 import numpy as np
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+os.makedirs("./tmp", exist_ok=True)
+with open("tmp/video_prediction.json", "w") as fp:
+    data = {"labels": ['', '', '', '']}
+    json.dump(data, fp)
 
 app = Flask(__name__ + "- Hand Gesture Recognition", static_folder='static')
 data = {}
