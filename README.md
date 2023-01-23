@@ -43,8 +43,10 @@ This GIF also demonstrates steps 3 and 4.
 
 ![](blob/how-to-run.gif)
 
-When the web GUI starts you can navigate to the Video Gesture Recognizer to start playing. 
-![](blob/gesture-recognizer.gif)
+When the web GUI starts you can navigate to the Video Gesture Recognizer to start playing.
+This 
+[DEMO VIDEO ON YOUTUBE](https://www.youtube.com/watch?v=jvUc0RISKLs&ab_channel=MohitKumar) shows
+the application running.
 
 ### FAQ 💡
 * If video recognition doesn't work: make sure the camera is not blocked by some other application (e.g. Videocalling in Zoom or Teams).
